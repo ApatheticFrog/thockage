@@ -4,7 +4,11 @@
 <br>sound was ripped from: https://www.youtube.com/watch?v=CY68szDjAXo&ab_channel=flurples
 
 >poetry shell
+<br>
+
 > ./make.sh
+<br>
+
 > python thockage/main.py
 
 <br>You need gcc to compile
