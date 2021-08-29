@@ -1,0 +1,50 @@
+[modes]
+
+
+[modes.default]
+space=[
+    "./audio/default/space/space01.ogg", 
+    "./audio/default/space/space02.ogg",
+    "./audio/default/space/space03.ogg",
+    "./audio/default/space/space04.ogg",
+    "./audio/default/space/space05.ogg",
+]
+enter=[
+    "./audio/default/enter/enter01.ogg",
+    "./audio/default/enter/enter02.ogg",
+    "./audio/default/enter/enter03.ogg"
+]
+general=[
+    "./audio/default/general/general01.ogg",
+    "./audio/default/general/general02.ogg", 
+    "./audio/default/general/general02.ogg", 
+    "./audio/default/general/general03.ogg", 
+    "./audio/default/general/general04.ogg", 
+    "./audio/default/general/general05.ogg", 
+    "./audio/default/general/general06.ogg",  
+    "./audio/default/general/general07.ogg" 
+]
+shift=[
+    "./audio/default/shift/shift01.ogg"
+]
+alt=[
+    "./audio/default/alt/alt.ogg"
+]
+cmd=[
+    "./audio/default/cmd/cmd01.ogg", 
+    "./audio/default/cmd/cmd02.ogg", 
+    "./audio/default/cmd/cmd03.ogg"
+]
+backspace=[
+    "./audio/default/backspace/backspace01.ogg", 
+    "./audio/default/backspace/backspace02.ogg"
+]
+ctrl=[
+    "./audio/default/ctrl/ctrl01.ogg"
+]
+esc=[
+    "./audio/default/esc/esc01.ogg"
+]
+tab=[
+    "./audio/default/tab/tab01.ogg"
+]
