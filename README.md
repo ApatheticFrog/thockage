@@ -5,6 +5,7 @@
 
 
 > ./make.sh
+> python thockage/main.py
 
 <br>You need gcc to compile
 
