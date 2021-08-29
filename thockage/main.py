@@ -1,6 +1,5 @@
 
-from pynput.keyboard import Key, Listener
-from audio import play_space, play_general
+from pynput.keyboard import Listener
 from keyboard_control import keyboard_control
  
 # Collect all event until released
