@@ -1,5 +1,5 @@
 from pynput.keyboard import Key
-import audio
+from audio import audio
 
 # wtb match
 cpdef keyboard_control(key):

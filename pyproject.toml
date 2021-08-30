@@ -11,6 +11,9 @@ toml = "^0.10.2"
 sounddevice = "^0.4.2"
 SoundFile = "^0.10.3"
 numpy = "^1.21.2"
+Cython = "^0.29.24"
+xlib = "^0.21"
+click = "^8.0.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"

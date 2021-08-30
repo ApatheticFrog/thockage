@@ -3,63 +3,81 @@ from config import config
 import random
 import sounddevice as sd
 import soundfile as sf
-
-default = config.get("modes").get("default")
-
-general_sounds = default.get("general")
-alt_sounds = default.get("alt")
-shift_sounds = default.get("shift")
-backspace_sounds = default.get("backspace")
-tab_sounds = default.get("tab")
-esc_sounds = default.get("esc")
-enter_sounds = default.get("enter")
-space_sounds = default.get("space")
-cmd_sounds = default.get("cmd")
-ctrl_sounds = default.get("ctrl")
+from definitions import modes
 
 
-cpdef play_general():
-    _play_random_sound_from_list(general_sounds)
+cdef class Audio():
+    cdef list general_sounds
+    cdef list alt_sounds
+    cdef list shift_sounds
+    cdef list backspace_sounds
+    cdef list tab_sounds
+    cdef list esc_sounds
+    cdef list enter_sounds
+    cdef list space_sounds
+    cdef list cmd_sounds
+    cdef list ctrl_sounds
+
+    def __cinit__(self):
+        self.sound_mode_update()
+
+    # Call after change in mode
+    cpdef sound_mode_update(self):
+        self.general_sounds = modes.selected_mode.get("general")
+        self.alt_sounds = modes.selected_mode.get("alt")
+        self.shift_sounds = modes.selected_mode.get("shift")
+        self.backspace_sounds = modes.selected_mode.get("backspace")
+        self.tab_sounds = modes.selected_mode.get("tab")
+        self.esc_sounds = modes.selected_mode.get("esc")
+        self.enter_sounds = modes.selected_mode.get("enter")
+        self.space_sounds = modes.selected_mode.get("space")
+        self.cmd_sounds = modes.selected_mode.get("cmd")
+        self.ctrl_sounds = modes.selected_mode.get("ctrl")
+
+    cpdef play_general(self):
+        self._play_random_sound_from_list(self.general_sounds)
 
 
-cpdef play_space():
-    _play_random_sound_from_list(space_sounds)
+    cpdef play_space(self):
+        self._play_random_sound_from_list(self.space_sounds)
+
+
+    cpdef play_enter(self):
+        self._play_random_sound_from_list(self.enter_sounds)
+
+
+    cpdef play_esc(self):
+        self._play_random_sound_from_list(self.esc_sounds)
+
+
+    cpdef play_alt(self):
+        self._play_random_sound_from_list(self.alt_sounds)
+
+
+    cpdef play_shift(self):
+        self._play_random_sound_from_list(self.shift_sounds)
     
 
-cpdef play_enter():
-    _play_random_sound_from_list(enter_sounds)
+    cpdef play_tab(self):
+        self._play_random_sound_from_list(self.tab_sounds)
 
 
-cpdef play_esc():
-    _play_random_sound_from_list(esc_sounds)
+    cpdef play_backspace(self):
+        self._play_random_sound_from_list(self.backspace_sounds)
 
 
-cpdef play_alt():
-    _play_random_sound_from_list(alt_sounds)
+    cpdef play_cmd(self):
+        self._play_random_sound_from_list(self.cmd_sounds)
 
 
-cpdef play_shift():
-    _play_random_sound_from_list(shift_sounds)
+    cpdef play_ctrl(self):
+        self._play_random_sound_from_list(self.ctrl_sounds)
+
+    
+    cpdef _play_random_sound_from_list(self, sound_list):
+        cdef sound = sound_list[random.randint(0, len(sound_list)-1)]
+        array, smp_rt = sf.read(sound, dtype = 'float32') 
+        sd.play(array, smp_rt)
  
 
-cpdef play_tab():
-    _play_random_sound_from_list(tab_sounds)
-
-
-cpdef play_backspace():
-    _play_random_sound_from_list(backspace_sounds)
-
-
-cpdef play_cmd():
-    _play_random_sound_from_list(cmd_sounds)
-
-
-cpdef play_ctrl():
-    _play_random_sound_from_list(ctrl_sounds)
-
- 
-cpdef _play_random_sound_from_list(sound_list):
-    cdef sound = sound_list[random.randint(0, len(sound_list)-1)]
-    array, smp_rt = sf.read(sound, dtype = 'float32') 
-    sd.play(array, smp_rt)
- 
+audio = Audio()

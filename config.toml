@@ -2,6 +2,7 @@
 
 
 [modes.default]
+src=""
 space=[
     "./audio/default/space/space01.ogg", 
     "./audio/default/space/space02.ogg",
@@ -48,3 +49,18 @@ esc=[
 tab=[
     "./audio/default/tab/tab01.ogg"
 ]
+
+
+[modes.secondary]
+src=""
+space=[]
+enter=[]
+general=[]
+shift=[]
+alt=[]
+cmd=[]
+backspace=[]
+ctrl=[]
+esc=[]
+tab=[]
+
