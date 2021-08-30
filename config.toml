@@ -2,7 +2,7 @@
 
 
 [modes.default]
-src=""
+src="https://www.youtube.com/watch?v=CY68szDjAXo&ab_channel=flurples"
 space=[
     "./audio/default/space/space01.ogg", 
     "./audio/default/space/space02.ogg",
