@@ -14,6 +14,7 @@ numpy = "^1.21.2"
 Cython = "^0.29.24"
 xlib = "^0.21"
 click = "^8.0.1"
+nose2 = "^0.10.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"

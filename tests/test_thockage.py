@@ -1,5 +1,16 @@
-from thockage import __version__
+import unittest
+import importlib
+
+#import audio
+#import thockage.definitions
+
+SRC_PATH = "../thockage"
+audio = importlib.import_module("audio", SRC_PATH)
+config = importlib.import_module("config", SRC_PATH)
+definitions = importlib.import_module("definitions", SRC_PATH)
+keyboard_control = importlib.import_module("keyboard_control", SRC_PATH)
+cli = importlib.import_module("cli", SRC_PATH)
 
 
-def test_version():
-    assert __version__ == '0.1.0'
+class FileDetection(unittest.TestCase):
+    pass

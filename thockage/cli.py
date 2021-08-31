@@ -18,8 +18,13 @@ def run(mode):
         audio.sound_mode_update()
 
     # Collect all event until released
-    with Listener(on_press = keyboard_control) as listener:   
+    with Listener(on_press=keyboard_control) as listener:
         listener.join()
 
-    
 
+def main() -> None:
+    manager()
+
+
+if __name__ == "__main__":
+    main()

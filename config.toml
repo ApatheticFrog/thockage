@@ -52,15 +52,61 @@ tab=[
 
 
 [modes.secondary]
-src=""
-space=[]
-enter=[]
-general=[]
-shift=[]
-alt=[]
-cmd=[]
-backspace=[]
-ctrl=[]
-esc=[]
-tab=[]
+src="https://www.youtube.com/watch?v=oKW0DgQKJHA&ab_channel=BrendanB"
+space=[
+    "./audio/secondary/space/space01.ogg",
+    "./audio/secondary/space/space02.ogg",
+    "./audio/secondary/space/space03.ogg",
+    "./audio/secondary/space/space04.ogg",
+    "./audio/secondary/space/space05.ogg",
+]
+enter=[
+    "./audio/secondary/enter/enter01.ogg",
+    "./audio/secondary/enter/enter02.ogg",
+    "./audio/secondary/enter/enter03.ogg"
+]
+general=[
+    "./audio/secondary/general/general01.ogg",
+    "./audio/secondary/general/general02.ogg",
+    "./audio/secondary/general/general03.ogg",
+]
+shift=[
+    "./audio/secondary/shift/shift01.ogg",
+    "./audio/secondary/shift/shift02.ogg",
+    "./audio/secondary/shift/shift03.ogg",
+    "./audio/secondary/shift/shift04.ogg",
+]
+alt=[
+    "./audio/secondary/alt/alt01.ogg",
+    "./audio/secondary/alt/alt02.ogg",
+    "./audio/secondary/alt/alt03.ogg",
+]
+cmd=[
+    "./audio/secondary/cmd/cmd01.ogg",
+    "./audio/secondary/cmd/cmd02.ogg",
+    "./audio/secondary/cmd/cmd03.ogg",
+    "./audio/secondary/cmd/cmd04.ogg",
+]
+backspace=[
+    "./audio/secondary/backspace/backspace01.ogg",
+    "./audio/secondary/backspace/backspace02.ogg",
+    "./audio/secondary/backspace/backspace03.ogg",
+]
+ctrl=[
+    "./audio/secondary/ctrl/ctrl01.ogg",
+    "./audio/secondary/ctrl/ctrl02.ogg",
+    "./audio/secondary/ctrl/ctrl03.ogg",
+    "./audio/secondary/ctrl/ctrl04.ogg",
+]
+esc=[
+    "./audio/secondary/esc/esc01.ogg",
+    "./audio/secondary/esc/esc02.ogg",
+    "./audio/secondary/esc/esc03.ogg",
+]
+tab=[
+    "./audio/secondary/tab/tab01.ogg",
+    "./audio/secondary/tab/tab02.ogg",
+    "./audio/secondary/tab/tab03.ogg",
+    "./audio/secondary/tab/tab04.ogg",
+]
 
