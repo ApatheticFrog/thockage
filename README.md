@@ -5,11 +5,12 @@
 > ./make.sh
 <br>
 
-> python thockage/main.py run
+> python thockage/cli.py run
 
 or
 
 > python thockage/main.py run --mode default
+> python thockage/cli.py run --mode secondary
 
 <br>You need gcc to compile
 <br>Poetry: https://python-poetry.org/

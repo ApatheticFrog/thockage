@@ -23,6 +23,7 @@ cdef class Audio():
 
     # Call after change in mode
     cpdef sound_mode_update(self):
+        # General is the bare minimum
         self.general_sounds = modes.selected_mode.get("general")
         self.alt_sounds = modes.selected_mode.get("alt")
         self.shift_sounds = modes.selected_mode.get("shift")
@@ -33,6 +34,32 @@ cdef class Audio():
         self.space_sounds = modes.selected_mode.get("space")
         self.cmd_sounds = modes.selected_mode.get("cmd")
         self.ctrl_sounds = modes.selected_mode.get("ctrl")
+
+        self._sound_mode_check_empty()
+
+
+    cpdef _sound_mode_check_empty(self):
+        if not self.general_sounds:
+            print("1 sound under the general tab is the bare minimum")
+        if not self.alt_sounds:
+            self.alt_sounds = self.general_sounds
+        if not self.shift_sounds:
+            self.shift_sounds = self.general_sounds
+        if not self.backspace_sounds:
+            self.backspace_sounds = self.general_sounds
+        if not self.tab_sounds:
+            self.tab_sounds = self.general_sounds
+        if not self.esc_sounds:
+            self.esc_sounds = self.general_sounds
+        if not self.enter_sounds:
+            self.enter_sounds = self.general_sounds
+        if not self.space_sounds:
+            self.space_sounds = self.general_sounds
+        if not self.cmd_sounds:
+            self.cmd_sounds = self.general_sounds
+        if not self.ctrl_sounds:
+            self.ctrl_sounds = self.general_sounds
+        
 
     cpdef play_general(self):
         self._play_random_sound_from_list(self.general_sounds)
